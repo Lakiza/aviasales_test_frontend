@@ -1,3 +1,4 @@
+import thunk from 'redux-thunk'
 import { 
     createStore, 
     applyMiddleware,
@@ -9,6 +10,10 @@ import metricsReducer from './reducers/metrics'
 const rootReducer = combineReducers({
     metrics: metricsReducer
 });
-const store = createStore(rootReducer);
+
+const store = createStore(
+    rootReducer,
+    applyMiddleware(thunk)
+);
 
 export default store;

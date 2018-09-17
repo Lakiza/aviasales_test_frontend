@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { isEmptyObject } from '../../../utils'
+
 import { connect } from 'react-redux'
 import Indicator from './Indicator'
 import './index.css'
@@ -9,19 +11,26 @@ class index extends Component {
             metrics
         } = this.props;
 
+        if (
+            !metrics.statistic ||
+            isEmptyObject(metrics.statistic)
+        ) {
+            return ''
+        }
+
         return (
             <div className="metrics-indicators">
                 <Indicator  title="Errors"
-                    percentage={metrics.errorsStat.percentage}
-                    average={metrics.errorsStat.average}
+                    percentage={metrics.statistic.errors}
+                    average={metrics.statisticAverage.errors}
                 /> 
                 <Indicator  title="Zeroes"
-                    percentage={metrics.zeroes.percentage}
-                    average={metrics.zeroes.average}
+                    percentage={metrics.statistic.zeroes}
+                    average={metrics.statisticAverage.zeroes}
                 /> 
                 <Indicator  title="Timeouts"
-                    percentage={metrics.timeouts.percentage}
-                    average={metrics.timeouts.average}
+                    percentage={metrics.statistic.timeout}
+                    average={metrics.statisticAverage.timeout}
                 /> 
             </div>
         )

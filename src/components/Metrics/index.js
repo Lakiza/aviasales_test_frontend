@@ -3,10 +3,31 @@ import Navigation from './Navigation'
 import Indicators from './Indicators'
 import InfoBlocks from './InfoBlocks'
 import Graph from './Graph'
+
+import { 
+    setPeriod,
+    PERIOD 
+} from '../../state/actions/metrics'
+
 import './index.css'
 
-export default class index extends Component {
+class index extends Component {
+    componentWillMount() {
+        const {
+            dispatch
+        } = this.props;
+        dispatch(setPeriod(PERIOD.threeDays))
+    }
+
     render() {
+        if (loading) {
+            return (
+                <div className="metrics">
+                    Loading
+                </div>
+            );
+        }
+
         return (
             <div className="metrics">
                 <div className="metrics-title"> Main metrics </div>
@@ -18,3 +39,8 @@ export default class index extends Component {
         )
     }
 }
+
+export default connect(state =>({
+    loading: state.metrics.loading,
+    loaded: state.metrics.loaded
+}))(index)
