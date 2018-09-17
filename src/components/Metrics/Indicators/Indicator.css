@@ -1,0 +1,28 @@
+.metrics-indicator {
+    margin-left: 20px;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.metrics-indicator__title {
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.metrics-indicator__average {
+    font-size: 12px;
+    color: #A0B0B9;
+}
+
+.metrics-indicator::before {
+    content: '';
+    top: 5px;
+    left: -18px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    display: inline-block;
+    background: #8BC34A;
+    border-radius: 50%;
+}

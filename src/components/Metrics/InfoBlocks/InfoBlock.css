@@ -1,0 +1,128 @@
+.metrics-infoblock {
+    display: table;
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+.metrics-infoblock__group {
+    margin-left: 10px;
+    margin-top: 10px;
+    min-width: 200px;
+    padding-right: 20px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.metrics-infoblock__wrapper-icon {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.metrics-infoblock__wrapper-content {
+    top: -10px;
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EFF1F4;
+}
+
+.metrics-infoblock__rightblock-description {
+    color: #A0B0B9;
+    font-size: 12px;
+    padding-bottom: 7px;
+}
+
+.metrics-infoblock__rightblock-help {
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.metrics-infoblock__rightblock-link {
+    cursor: pointer;
+    color: #2196F3;
+}
+
+.metrics-infoblock__title {
+    color: #4A4A4A;
+    font-size: 16px;
+}
+
+.icon-indicator {
+    fill: #8BC34A;
+}
+
+.metrics-infoblock--decreased
+.icon-indicator {
+    fill: #FF6A67;
+}
+
+.metrics-infoblock__difference {
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 15px;
+    background: #8BC34A;
+}
+
+.metrics-infoblock__difference::before {
+    content: '+';
+    color: white;
+}
+
+.metrics-infoblock--decreased 
+.metrics-infoblock__rightblock {
+    color: #FF6A67;
+}
+
+.metrics-infoblock--decreased 
+.metrics-infoblock__difference {
+    background: #FF6A67;
+}
+
+.metrics-infoblock--decreased 
+.metrics-infoblock__difference::before {
+    content: '-';
+}
+
+.metrics-infoblock--decreased 
+.metrics-infoblock__title {
+    color: #FF6A67;
+}
+
+.metrics-infoblock__current {
+    margin: 5px 0;
+}
+
+.metrics-infoblock__current-value,
+.metrics-infoblock__current-title {
+    color: #4A4A4A;
+}
+
+.metrics-infoblock__previous-value,
+.metrics-infoblock__previous-title {
+    color: #A0B0B9;
+}
+
+.metrics-infoblock__current-value,
+.metrics-infoblock__previous-value {
+    font-size: 20px;
+}
+
+.metrics-infoblock__current-title,
+.metrics-infoblock__previous-title {
+    font-size: 12px;
+}
+
+.metrics-infoblock_rightblock-info {
+    padding-bottom: 7px;
+}
+
+.metrics-infoblock__rightblock-link::before {
+    content: ', ';
+}
+
+.metrics-infoblock__rightblock-link:nth-child(2)::before {
+    display: none;
+}

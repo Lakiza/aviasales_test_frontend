@@ -1,0 +1,47 @@
+.metrics-graph {
+}
+
+.metrics-graph__canvas {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 80%;
+    height: 8px;
+    background: #A0B0B9;
+}
+
+.metrics-graph__errors {
+    width: 80%;
+    margin-top: 10px;
+}
+
+.metrics-graph__item {
+    margin-right: 40px;
+    display: inline-block;
+}
+
+.metrics-graph__item::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.metrics-graph__line:nth-child(1),
+.metrics-graph__item:nth-child(1)::before {
+    background: #FFCC00;
+}
+
+.metrics-graph__line:nth-child(2),
+.metrics-graph__item:nth-child(2)::before {
+    background: #5856D5;
+}
+
+.metrics-graph__line:nth-child(3),
+.metrics-graph__item:nth-child(3)::before {
+    background: #2196F3;
+}
+
+.metrics-graph__line:nth-child(4),
+.metrics-graph__item:nth-child(4)::before {
+    background: #A0B0B9;
+}

@@ -1,0 +1,7 @@
+.metrics-indicators {
+    margin: 20px 0;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
