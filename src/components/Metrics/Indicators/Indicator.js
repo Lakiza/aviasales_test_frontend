@@ -12,10 +12,10 @@ export default class indicator extends Component {
             <div className="metrics-indicator">
                 <div className="metrics-indicator__title">
                     <span> {`${title}:`} </span>
-                    <span> {`${percentage}%`} </span>
+                    <span> {percentage ? percentage.toFixed(2) + '%' : 'no data'} </span>
                 </div>
                 <div className="metrics-indicator__average">
-                    <span> {`Average: ${average}%`} </span>
+                    <span> {'Average: ' + (average ? average.toFixed(2) + '%' : 'No data')} </span>
                 </div>
             </div>
         )

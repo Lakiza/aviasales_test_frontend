@@ -1,10 +1,10 @@
+import DashboardSDK from '../../sdk/web/Dashboard'
+
 export const SET = 'metrics/set'
 export const RESET = 'metrics/reset'
 
-import DashboardSDK from '../../sdk/web/Dashboard'
-
 export const PERIOD = {
-    lastHour: 'last_hour',
+    lastHour: 'lastHour',
     today: 'today',
     yesterday: 'yesterday',
     threeDays: '3days'
@@ -18,12 +18,16 @@ export function setPeriod(period) {
             period: period
         }));
 
-        const response = await DashboardSDK.getMetrics(period);
-        if (response.type === success) {
+        const sdk = new DashboardSDK();
+        const response = await sdk.getMetrics(period);
+        console.log(response);
+        if (response.type === 'success') {
+            dispatch(reset())
             dispatch(_set({
                 loading: false,
                 loaded: true,
                 loadingFailure: false,
+                period: period,
                 ...response.data
             }));
         }
@@ -34,6 +38,12 @@ export function setPeriod(period) {
             loadingFailure: true
         }));
     }
+}
+
+export function reset() {
+    return {
+        type: RESET
+    };
 }
 
 export function _set(payload) {

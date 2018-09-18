@@ -20,7 +20,7 @@ export default class Clicks extends Component {
                 currentTitle="Yesterday"
                 previousTitle="Last friday"
                 rightInfo={[
-                    {title: 'CTR', value:`${ctr}%`},
+                    {title: 'CTR', value: ctr ? ctr.toFixed(2) + '%' : 'No data'},
                 ]}
                 rightDescription="Conversion from searches to clicks on all devices."
                 rightHelp={[

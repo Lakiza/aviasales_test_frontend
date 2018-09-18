@@ -36,6 +36,8 @@ export default class InfoBlock extends Component {
             period
         } = this.props;
 
+
+        console.log(period);
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         switch(period) {
             case PERIOD.lastHour: {
@@ -108,11 +110,11 @@ export default class InfoBlock extends Component {
                             }
                         </div>
                         <div className="metrics-infoblock__current">
-                            <span className="metrics-infoblock__current-value"> {current} </span>
+                            <span className="metrics-infoblock__current-value"> {current ? current : 'No data'} </span>
                             <span className="metrics-infoblock__current-title"> {this.getCurrentTitle()} </span>
                         </div>
                         <div className="metrics-infoblock__previous">
-                            <span className="metrics-infoblock__previous-value"> {previous} </span>
+                            <span className="metrics-infoblock__previous-value"> {previous ? previous : 'No data'} </span>
                             <span className="metrics-infoblock__previous-title"> {this.getPreviousTitle()} </span>
                         </div>
                     </div>
@@ -120,7 +122,7 @@ export default class InfoBlock extends Component {
                         {rightInfo.map((el, key)=>{
                             return <div className="metrics-infoblock_rightblock-info" key={key}>
                                 <span> {el.title}: </span>
-                                <span> {el.value} </span>
+                                <span> {el.value ? el.value : 'No data'} </span>
                             </div>
                         })}
                         <div className="metrics-infoblock__rightblock-description"> {rightDescription} </div>

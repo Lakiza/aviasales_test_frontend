@@ -1,9 +1,9 @@
 import axios from 'axios'
 
 export default class AjaxRequest {
-    request(url, data = null) {
+    get(url, data = null) {
         return axios({
-            method: 'post',
+            method: 'get',
             url: url, 
             data: data ? JSON.stringify(data) : null
         });

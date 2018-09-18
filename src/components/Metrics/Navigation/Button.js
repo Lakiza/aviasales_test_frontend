@@ -15,7 +15,7 @@ class Button extends Component {
         } = this.props;
 
         return (
-            <div className="metrics-navigation__button" onClick={()=>{
+            <div className={`metrics-navigation__button ${period === metrics.period ? 'metrics-navigation__button--selected' : ''}`} onClick={()=>{
                 dispatch(setPeriod(period));
             }} {...propsPack}> 
                 {title}

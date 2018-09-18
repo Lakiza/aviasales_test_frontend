@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Navigation from './Navigation'
 import Indicators from './Indicators'
 import InfoBlocks from './InfoBlocks'
@@ -12,7 +13,7 @@ import {
 import './index.css'
 
 class index extends Component {
-    componentWillMount() {
+    componentDidMount() {
         const {
             dispatch
         } = this.props;
@@ -20,6 +21,10 @@ class index extends Component {
     }
 
     render() {
+        const {
+            loading
+        } = this.props;
+
         if (loading) {
             return (
                 <div className="metrics">

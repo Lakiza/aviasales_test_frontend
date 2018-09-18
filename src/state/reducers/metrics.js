@@ -11,29 +11,29 @@ const initialState = {
     loadFailure: false,
     errors: [],
     statistic: {
-        errors: 0,
-        zeroes: 0,
-        timeout: 0,
+        errors: undefined,
+        zeroes: undefined,
+        timeout: undefined,
         searches: {
-            current: 29380,
-            previous: 29380
+            current: undefined,
+            previous: undefined
         },
         clicks: {
-            current: 100,
-            previous: 250
+            current: undefined,
+            previous: undefined
         },
-        ctr: 0.6,
-        str: 0.5,
-        avgcheck: 10243.0263157895,
+        ctr: undefined,
+        str: undefined,
+        avgcheck: undefined,
         bookings: {
-            current: 24,
-            previous: 26
+            current: undefined,
+            previous: undefined
         }
     },
     statisticAverage: {
-        errors: 0,
-        zeroes: 0,
-        timeout: 0
+        errors: undefined,
+        zeroes: undefined,
+        timeout: undefined
     }
 };
 

@@ -14,8 +14,16 @@
     transition: all 300ms;
 }
 
-.metrics-navigation__button:hover {
+.metrics-navigation__button--selected {
     color: white;
     background: #2196F3;
     border-color: #2196F3;
 }
+
+.metrics-navigation__button:hover {
+    color: white;
+    opacity: .7;
+    background: #2196F3;
+    border-color: #2196F3;
+}
+

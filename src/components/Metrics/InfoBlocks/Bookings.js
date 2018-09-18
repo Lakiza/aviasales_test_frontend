@@ -21,8 +21,8 @@ export default class Bookings extends Component {
                 currentTitle="Yesterday"
                 previousTitle="Last friday"
                 rightInfo={[
-                    {title: 'STR', value:`${str}%`},
-                    {title: 'Avg.Check', value: `${avgcheck}`}
+                    {title: 'STR', value:str ? str.toFixed(2) + '%' : 'No data'},
+                    {title: 'Avg.Check', value: avgcheck ? avgcheck.toFixed(2) : 'No data'}
                 ]}
                 rightDescription="Conversion from searches to bookings on all devices."
                 rightHelp={[
